@@ -15,3 +15,38 @@ material = SubResource("ShaderMaterial_05l2w")
 offset_right = 1147.0
 offset_bottom = 650.0
 texture = ExtResource("2_ig5kc")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1413052860]
+clip_contents = false
+offset_left = 281.0
+offset_top = 2.0
+offset_right = 1036.0
+offset_bottom = 166.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "WarioWare"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2051572833]
+offset_left = 504.0
+offset_top = 210.0
+offset_right = 838.0
+offset_bottom = 531.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1169855322]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1844661707]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1258753545]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
