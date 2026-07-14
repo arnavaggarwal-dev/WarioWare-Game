@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://oi3ahh0psdgp"]
 
 [ext_resource type="Shader" uid="uid://bnqg4fhtd24ej" path="res://background.gdshader" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://l17ly00ad531" path="res://title_screen.gd" id="1_ig5kc"]
 [ext_resource type="Texture2D" uid="uid://cub53xj1xpsg5" path="res://assets/v469mfvodra4vminkrmnxaphbjzf1rbleunswdd0hxcgaosxqc0vahpnhbn1el7s-o.png" id="2_ig5kc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05l2w"]
@@ -8,12 +9,15 @@ shader = ExtResource("1_ak2if")
 shader_parameter/scroll_speed = 0.2
 
 [node name="TitleScreen" type="Node2D" unique_id=20499609]
+script = ExtResource("1_ig5kc")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1526259406]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_05l2w")
-offset_right = 1147.0
-offset_bottom = 650.0
+offset_left = -47.0
+offset_top = 16.0
+offset_right = 1153.0
+offset_bottom = 816.0
 texture = ExtResource("2_ig5kc")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1413052860]
@@ -27,10 +31,10 @@ theme_override_font_sizes/normal_font_size = 108
 text = "WarioWare"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2051572833]
-offset_left = 504.0
-offset_top = 210.0
-offset_right = 838.0
-offset_bottom = 531.0
+offset_left = 411.0
+offset_top = 208.0
+offset_right = 745.0
+offset_bottom = 529.0
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1169855322]
 layout_mode = 2
@@ -50,3 +54,6 @@ layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
 text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
