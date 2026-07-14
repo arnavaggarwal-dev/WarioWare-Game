@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://oi3ahh0psdgp"]
+
+[node name="TitleScreen" type="Node2D" unique_id=20499609]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1526259406]
+offset_right = 1147.0
+offset_bottom = 650.0
