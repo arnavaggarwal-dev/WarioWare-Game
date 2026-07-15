@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://0peihuv2yioi"]
 
-[node name="Node2D" type="Node2D" unique_id=1436753545]
+[node name="LevelScene" type="Node2D" unique_id=296265104]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1893318069]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=1882559991]
+offset_right = 40.0
+offset_bottom = 40.0
