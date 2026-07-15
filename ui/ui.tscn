@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://bl076qls316v3"]
+
+[ext_resource type="Script" uid="uid://bq82lfajsjh3v" path="res://lives_display.gd" id="1_ks8t7"]
+[ext_resource type="Texture2D" uid="uid://b4dix75452ro4" path="res://assets/lives/usb_spritesheet.png" id="2_wl5ax"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwxgr"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(0, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wodn"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(152, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2453"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(304, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov72u"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(456, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnd58"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(608, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_disr2"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(760, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weph3"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(912, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwyrp"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1064, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wvtj"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1216, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kfvg"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1368, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njjl4"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1520, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbu15"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1672, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5v1s"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1824, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b20nl"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(1976, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edb5u"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(2128, 0, 152, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnby1"]
+atlas = ExtResource("2_wl5ax")
+region = Rect2(2280, 0, 152, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n83yt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwxgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wodn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2453")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov72u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnd58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_disr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weph3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwyrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wvtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kfvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njjl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbu15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5v1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b20nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edb5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnby1")
+}],
+"loop": true,
+"name": &"pulse",
+"speed": 5.0
+}]
+
+[node name="UI" type="CanvasLayer" unique_id=212241990]
+
+[node name="LivesDisplay" type="HBoxContainer" parent="." unique_id=3275768]
+offset_left = 108.0
+offset_top = 148.0
+offset_right = 1398.0
+offset_bottom = 304.0
+theme_override_constants/separation = 10
+script = ExtResource("1_ks8t7")
+max_lives = null
+
+[node name="Life1Wrapper" type="Control" parent="LivesDisplay" unique_id=1743293536]
+custom_minimum_size = Vector2(200, 70.4)
+layout_mode = 2
+
+[node name="Life1" type="AnimatedSprite2D" parent="LivesDisplay/Life1Wrapper" unique_id=613709185]
+position = Vector2(30, 15)
+scale = Vector2(1.204, 1.44)
+sprite_frames = SubResource("SpriteFrames_n83yt")
+animation = &"pulse"
+frame_progress = 0.919408
+
+[node name="Life2Wrapper" type="Control" parent="LivesDisplay" unique_id=1066910710]
+custom_minimum_size = Vector2(200, 70.4)
+layout_mode = 2
+
+[node name="Life2" type="AnimatedSprite2D" parent="LivesDisplay/Life2Wrapper" unique_id=1602075039]
+position = Vector2(30, 15)
+scale = Vector2(1.204, 1.44)
+sprite_frames = SubResource("SpriteFrames_n83yt")
+animation = &"pulse"
+speed_scale = 1.2
+
+[node name="Life3Wrapper" type="Control" parent="LivesDisplay" unique_id=1073984806]
+custom_minimum_size = Vector2(200, 70.4)
+layout_mode = 2
+
+[node name="Life3" type="AnimatedSprite2D" parent="LivesDisplay/Life3Wrapper" unique_id=500576276]
+position = Vector2(30, 15)
+scale = Vector2(1.204, 1.44)
+sprite_frames = SubResource("SpriteFrames_n83yt")
+animation = &"pulse"
+speed_scale = 1.2
+
+[node name="Life4Wrapper" type="Control" parent="LivesDisplay" unique_id=190696568]
+custom_minimum_size = Vector2(200, 70.4)
+layout_mode = 2
+
+[node name="Life4" type="AnimatedSprite2D" parent="LivesDisplay/Life4Wrapper" unique_id=1985141731]
+position = Vector2(30, 15)
+scale = Vector2(1.204, 1.44)
+sprite_frames = SubResource("SpriteFrames_n83yt")
+animation = &"pulse"
+frame_progress = 0.9042145
+speed_scale = 1.2
+
+[node name="Life5Wrapper" type="Control" parent="LivesDisplay" unique_id=704876706]
+custom_minimum_size = Vector2(200, 70.4)
+layout_mode = 2
+
+[node name="Life5" type="AnimatedSprite2D" parent="LivesDisplay/Life5Wrapper" unique_id=1981026962]
+position = Vector2(30, 15)
+scale = Vector2(1.204, 1.44)
+sprite_frames = SubResource("SpriteFrames_n83yt")
+animation = &"pulse"
+speed_scale = 1.2

@@ -14,6 +14,11 @@ config/name="WarioWare"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*uid://c46xa4qgfnbhh"
+Ui="*uid://bl076qls316v3"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

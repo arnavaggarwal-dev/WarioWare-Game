@@ -1,16 +1,14 @@
 extends HBoxContainer
 
-@export var max_lives: int = 5
-var current_lives: int = max_lives
+var current_lives: int = 5
 
 func _ready() -> void:
 	update_display()
+	GameState.lives_changed.connect(_on_lives_changed)
 
-func lose_life() -> void:
-	current_lives = max(current_lives - 1, 0)
+func _on_lives_changed(new_lives: int) -> void:
+	current_lives = new_lives
 	update_display()
-	if current_lives == 0:
-		game_over()
 
 func update_display() -> void:
 	for i in get_child_count():
@@ -23,6 +21,3 @@ func update_display() -> void:
 		else:
 			icon.stop()
 			icon.modulate.a = 0.3
-
-func game_over() -> void:
-	pass
