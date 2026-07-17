@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://nxca420dfnjy"]
+
+[ext_resource type="PackedScene" uid="uid://co5u6xif0cv8n" path="res://assets/game_over/game_over_character.glb" id="1_y26ei"]
+[ext_resource type="Script" uid="uid://df7ydtncs0f6i" path="res://game_over.gd" id="1_yxx3c"]
+
+[node name="GameOver" type="Node3D" unique_id=530483462]
+script = ExtResource("1_yxx3c")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=419650796]
+transform = Transform3D(1, 0, 0, 0, 0.88712364, 0.46153185, 0, -0.46153185, 0.88712364, 0, 1.4891675, 2.4674506)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1795331146]
+transform = Transform3D(1, 0, 0, 0, -0.7977523, 0.60298526, 0, -0.60298526, -0.7977523, 0, 0.9767456, -3.1155307)
+
+[node name="game_over_character" parent="." unique_id=1316267870 instance=ExtResource("1_y26ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07485255, 0, -4.3073616)

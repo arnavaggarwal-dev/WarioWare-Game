@@ -25,6 +25,7 @@ func lose_life() -> void:
 	lives_changed.emit(current_lives)
 	if current_lives <= 0:
 		game_over.emit()
+		get_tree().change_scene_to_file("res://game_over.tscn")
 
 func reset() -> void:
 	current_lives = max_lives

@@ -132,7 +132,6 @@ offset_right = 1398.0
 offset_bottom = 304.0
 theme_override_constants/separation = 10
 script = ExtResource("1_ks8t7")
-max_lives = null
 
 [node name="Life1Wrapper" type="Control" parent="LivesDisplay" unique_id=1743293536]
 custom_minimum_size = Vector2(200, 70.4)
