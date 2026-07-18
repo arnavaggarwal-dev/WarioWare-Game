@@ -1,7 +1,19 @@
 [gd_scene format=3 uid="uid://5jgya508mgx8"]
 
 [ext_resource type="PackedScene" uid="uid://b55rjlrmwj3kn" path="res://assets/game_over/actor/motion-dummy-male-643082.fbx" id="1_xiurw"]
+[ext_resource type="Shader" uid="uid://vara7g04tmdb" path="res://shaders/dissolve.gdshader" id="2_5qeqh"]
 [ext_resource type="Animation" uid="uid://ba4cwy6ec8i1f" path="res://assets/game_over/motion/runtoblast.res" id="2_5qyyk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2l8b"]
+render_priority = 0
+shader = ExtResource("2_5qeqh")
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/edge_color_hot = Color(0.019607844, 1, 1, 1)
+shader_parameter/edge_color_outer = Color(0.2, 0.8, 1, 1)
+shader_parameter/edge_width = 0.12
+shader_parameter/edge_glow = 10.0
+shader_parameter/pop_amount = 0.15
+shader_parameter/albedo = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_5qeqh"]
 
@@ -13,7 +25,7 @@ _data = {
 
 [node name="motion-dummy-male-643082" unique_id=1277721607 instance=ExtResource("1_xiurw")]
 
-[node name="GeneralSkeleton" parent="." index="0" unique_id=327857658]
+[node name="GeneralSkeleton" parent="." index="0" unique_id=843278732]
 bones/0/rotation = Quaternion(0, -0.29585654, 0, 0.95523244)
 bones/1/position = Vector3(3.8146972e-08, 0.86777365, -2.2737367e-15)
 bones/1/rotation = Quaternion(0.25034034, 0.037894696, -0.14479083, 0.95651937)
@@ -96,6 +108,9 @@ bones/98/rotation = Quaternion(0.45298693, -0.004025854, -0.015887141, 0.8913665
 bones/99/rotation = Quaternion(-0.057007965, 0.038378235, 0.8677029, 0.49230987)
 bones/100/rotation = Quaternion(1.5756124e-05, -0.070171274, 3.723562e-06, 0.99753505)
 
-[node name="AnimationPlayer" parent="." index="2" unique_id=260425912]
+[node name="Motion_Dummy_Male" parent="GeneralSkeleton" index="0" unique_id=572035684]
+material_override = SubResource("ShaderMaterial_g2l8b")
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=261337173]
 libraries/motion = SubResource("AnimationLibrary_g2l8b")
 autoplay = &"motion/runtoblast"
